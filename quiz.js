@@ -1661,12 +1661,6 @@ function addExitButton() {
   exitBtn.style.border = "none";
   exitBtn.style.cursor = "pointer";
   exitBtn.style.transition = "all 0.3s ease";
-  exitBtn.style.marginTop="20px";
-  exitBtn.style.marginLeft="0";
-  exitBtn.style.marginBottom="20px";
-  exitBtn.style.marginRight="0";
-  exitBtn.style.padding="10px 20px";
-  exitBtn.style.display="inline-block"
   exitBtn.style.background = "#ff4b2b";
   exitBtn.style.color = "#fff";
   exitBtn.onmouseover = () => {
