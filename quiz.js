@@ -1515,8 +1515,8 @@ function displayQuestion() {
   questionEl.style.padding = "20px";
   questionEl.style.borderRadius = "15px";
   questionEl.style.fontSize = "25px";
-  questionEl.style.marginBottom = "20px";
-
+  questionEl.style.marginBottom = "300px";
+  
   const optionsContainer = document.getElementById("options-container");
   optionsContainer.innerHTML = "";
   q.options.forEach((opt, idx) => {
@@ -1529,10 +1529,14 @@ function displayQuestion() {
     btn.style.fontSize = "20px";
     btn.style.borderRadius = "10px";
     btn.style.border = "none";
+    btn.style.marginTop = "-250px";
+    btn.style.marginBottom = "250px"
     btn.style.cursor = "pointer";
     btn.style.transition = "all 0.3s ease";
     btn.style.background = "linear-gradient(135deg,rgba(4, 129, 253, 1), #fc0404ff, rgba(4, 129, 253, 1))";
     btn.style.color = "#ffffff";
+
+
     btn.onmouseover = () => {
       btn.style.transform = "scale(1.1)";
       btn.style.background = "rgba(3, 250, 155, 0.13)";
