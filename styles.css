@@ -367,4 +367,33 @@ img, video, iframe {
   max-width: 100%;
   height: auto;
 }
+/* تصميم أساسي للكمبيوتر */
+.question-block {
+  display: flex;
+  flex-direction: column; /* أو row لو تحب الاختيارات جنب بعض */
+  gap: 20px; /* المسافة بين الاختيارات والزرار */
+}
+
+.options button {
+  margin-bottom: 10px;
+}
+
+.submit-btn {
+  align-self: flex-start; /* يثبت مكان الزرار على يسار أو يمين */
+  padding: 10px 20px;
+  font-size: 16px;
+}
+
+/* تصميم للجوال */
+@media (max-width: 768px) {
+  .question-block {
+    gap: 10px; /* تصغير المسافة على الموبايل */
+  }
+
+  .submit-btn {
+    align-self: center; /* الزرار يكون في منتصف الشاشة */
+    width: 100%; /* يشغل كامل عرض الشاشة تقريبًا */
+    font-size: 14px;
+  }
+}
 
