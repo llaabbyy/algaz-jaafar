@@ -1652,17 +1652,40 @@ function startQuiz(level) {
 function addExitButton() {
   let exitBtn = document.createElement("button");
   exitBtn.textContent = "الخروج من الاختبار";
-  exitBtn.style.position = "fixed";
-  exitBtn.style.bottom = "20px";
-  exitBtn.style.left = "20px";
+
+  // ===== الأساسيات =====
+  exitBtn.style.position = "fixed"; // زر ثابت على الشاشة
+  exitBtn.style.bottom = "30px";    // بعد عن أسفل الشاشة
+  exitBtn.style.left = "30px";      // بعد عن يسار الشاشة
+  exitBtn.style.zIndex = "9999";    // فوق كل العناصر
+
+  // ===== الشكل =====
   exitBtn.style.padding = "15px 25px";
   exitBtn.style.fontSize = "18px";
-  exitBtn.style.borderRadius = "10px";
+  exitBtn.style.borderRadius = "12px";
   exitBtn.style.border = "none";
   exitBtn.style.cursor = "pointer";
-  exitBtn.style.transition = "all 0.3s ease";
   exitBtn.style.background = "#ff4b2b";
   exitBtn.style.color = "#fff";
+  exitBtn.style.boxShadow = "0 0 15px rgba(0,0,0,0.3)";
+  exitBtn.style.transition = "all 0.3s ease";
+
+  // ===== هوامش افتراضية (مش ضرورية هنا لأن الزر fixed) =====
+  exitBtn.style.margin = "20px";
+
+  // ===== تأثير عند المرور =====
+  exitBtn.onmouseover = () => {
+    exitBtn.style.transform = "scale(1.1)";
+    exitBtn.style.background = "#ff2e00";
+  };
+  exitBtn.onmouseout = () => {
+    exitBtn.style.transform = "scale(1)";
+    exitBtn.style.background = "#ff4b2b";
+  };
+
+  document.body.appendChild(exitBtn);
+}
+
   exitBtn.onmouseover = () => {
     exitBtn.style.transform = "scale(1.1)";
     exitBtn.style.background = "#ff416c";
@@ -1683,8 +1706,6 @@ function addExitButton() {
   };
 
   document.body.appendChild(exitBtn);
-}
-
 function goAbout() {
   window.location.href = "about.html";
 }
