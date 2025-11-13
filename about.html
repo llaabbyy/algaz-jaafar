@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>حول الموقع</title>
+<link rel="stylesheet" href="styles.css">
+<style>@keyframes float {
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(-5px); }
+  100% { transform: translateY(0px); }
+}</style>
+</head>
+<body>
+<div class="container">
+
+  <!-- القائمة الرئيسية في المنتصف -->
+  <div class="top-menu-center">
+    <span class="menu-item" onclick="goHome()">
+      <img style="width:60px;border-radius: 30px;border: inset;border-color: red;" src="OIP (5).jpg" alt="">
+      الرئيسية
+    </span>
+    <span class="menu-item active">
+      <img style="width:60px;border-radius: 30px;border: inset;border-color: red;" src="OIP (7).jpg" alt="">
+      لمحة عن الموقع</span>
+  </div>
+
+  <h1 id="site-title">
+    <img src="OIP.jpg" alt=" تعذر اظهار الصورة استخدم موقع حدث يقبل هذا النوع من الصور"style="width:100px; margin-left:10px;border-radius:30px;">
+    ألغاز جعفر    
+  </h1>
+
+  <!-- محتوى حول الموقع -->
+  <div class="about-card">
+    <h1 style="color: #ff4b2b;">عن الموقع</h1>
+    <p>مرحباً بك في موقع "ألغاز جعفر"، الموقع المخصص لإختبارات الذكاء الممتعة والتحديات العقلية.</p>
+    <p>الموقع يحتوي على مستويات متنوعة: سهل، متوسط، صعب، وجنوني، لتختبر مهاراتك الذهنية بطريقة ممتعة وذكية.</p>
+    <p style="border-color: red;border:inset;background: linear-gradient(-45deg, #6a11cb, #2575fc, #ff416c, #ff4b2b);font-size:x-large;color:black;
+    ;text-align: center; border-block-start-color: rgb(156, 3, 245);border-block-start-width:5px;
+    border-block-end-color:rgb(156, 3, 245) ;border-block-start-width:5px;border-left-color:red ;
+    border-left-width: 5px;border-right-color: red; border-right-width: 5px;
+    ">تصميم وإنشاء: أحمد جعفر</p>
+    <p style="font-size:large;color:black;font-weight: 300
+    ;text-align:center;">
+    <img style="width: 60px;border-radius: 40px;border: inset;border-color: red;margin-bottom: -25px;" src="OIP (6).jpg" alt="">
+    محافظة المنوفيه مركز شبين الكوم</p>
+  </div>
+
+  <!-- زر العودة للقائمة الرئيسية -->
+  <button class="interactive-btn" onclick="goHome()">العودة للقائمة الرئيسية</button>
+</div>
+
+<script>
+function goHome() {
+    window.location.href = 'index.html';
+}
+</script>
+</body>
+</html>

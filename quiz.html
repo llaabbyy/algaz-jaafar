@@ -1,0 +1,64 @@
+<!doctype html>
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>اختبار — ألغاز جعفر</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<header class="main-header">
+<div class="container">
+<h1 id="site-title-small">ألغاز جعفر</h1>
+<nav class="main-nav">
+<a href="index.html">الرئيسية</a>
+<a href="about.html">حول</a>
+</nav>
+</div>
+</header>
+
+
+<main class="container quiz-container" id="app">
+<section id="level-select" class="center">
+<h2>اختر مستوى الصعوبة</h2>
+<div class="levels">
+<button class="level-btn" data-level="easy">سهل</button>
+<button class="level-btn" data-level="medium">متوسط</button>
+<button class="level-btn" data-level="hard">صعب</button>
+<button class="level-btn" data-level="insane">جنوني</button>
+</div>
+</section>
+
+
+<section id="quiz-screen" class="hidden">
+<div class="quiz-top">
+<div id="timer">00:00</div>
+<div id="progress">سؤال <span id="current">0</span> من <span id="total">0</span></div>
+</div>
+
+
+<div id="question-area">
+<h3 id="question-text"></h3>
+<div id="options"></div>
+</div>
+
+
+<div class="quiz-actions">
+<button id="submit-answer" class="btn">تأكيد</button>
+<button id="finish-early" class="btn ghost">انتهيت مبكّر</button>
+</div>
+</section>
+
+
+<section id="result-screen" class="hidden center">
+<h2 id="result-title"></h2>
+<p id="result-message"></p>
+<p>نسبة الإجابات الصحيحة: <span id="result-percent"></span>%</p>
+<button id="back-to-menu" class="btn">العودة للقائمة الرئيسية</button>
+</section>
+
+
+</main>
+
+
+<script src="script.js"></script>
+<script src="quiz.js"></script>
+</body>
+</html>

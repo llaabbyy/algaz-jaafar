@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ألغاز جعفر </title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div class="container">
+
+  <!-- القائمة الرئيسية في المنتصف -->
+  <div class="top-menu-center">
+    <span class="menu-item active">
+      <img style="width:100px;border-radius: 30px;border: inset;border-color:yellow ;margin-left:10px;margin-bottom: -10px;" src="OIP (5).jpg" alt="">
+     <h2>الرئيسية</h2>        
+    </span>
+    <span class="menu-item" onclick="goAbout()">
+       <img style="width:110px;border-radius: 30px;border:inset;border-color: red,;margin-left:10px;margin-bottom: -10px;" src="OIP (7).jpg" alt="">
+     <h2>  لمحة عن الموقع </h2>
+    </span>
+  </div>
+
+  <h1 style="color:yellow;" id="site-title">
+    <img src="OIP (1).jpg" alt=" تعذر اظهار الصورة استخدم موقع حدث يقبل هذا النوع من الصور"style="width:100px; margin-left:10px;border-radius:30px;">
+    ألغاز جعفر
+  </h1>
+
+  <!-- الأزرار -->
+  <button class="interactive-btn" onclick="startQuiz()">ابدأ التحدي</button>
+  <button class="interactive-btn" onclick="goAbout()">حول الموقع</button>
+</div>
+
+<script>
+function startQuiz() {
+    window.location.href = 'levels.html';
+}
+
+function goAbout() {
+    window.location.href = 'about.html';
+}
+</script>
+</body>
+</html>

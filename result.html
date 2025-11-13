@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>النتيجة</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div class="container">
+
+  <h1 id="site-title">الغاز جعفر</h1>
+
+  <div class="about-card" id="result-card"></div>
+
+  <button class="interactive-btn" onclick="goHome()">العودة للقائمة الرئيسية</button>
+
+</div>
+
+<script>
+function goHome() {
+  window.location.href = 'index.html';
+}
+
+function showResult() {
+  const params = new URLSearchParams(window.location.search);
+  const score = parseInt(params.get('score'));
+  const total = parseInt(params.get('total'));
+  const percent = Math.round((score/total)*100);
+
+  let message = '';
+  if (percent < 40) message = 'حظاً موفقاً في المرة القادمة';
+  else if (percent < 70) message = 'مستوى ذكاء جيد، استمر في التطوير';
+  else if (percent < 90) message = 'مستوى ذكاء ممتاز';
+  else message = 'عبقري 🔥';
+
+  document.getElementById('result-card').innerHTML =
+    `<h2>نتيجتك: ${score} / ${total}</h2>
+     <p>نسبة الذكاء: ${percent}%</p>
+     <p>${message}</p>`;
+}
+
+showResult();
+</script>
+</body>
+</html>

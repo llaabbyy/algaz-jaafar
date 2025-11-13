@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>اختيار المستوى</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div class="container">
+
+  <!-- القائمة الرئيسية في المنتصف -->
+  <div class="top-menu-center">
+    <span class="menu-item" onclick="goHome()">
+      <img style="width:60px;border-radius: 30px;border: inset;border-color: red;margin-bottom: -10px;" src="OIP (5).jpg" alt="">
+   الرئيسية </span>
+    <span class="menu-item active">
+      <img style="width:60px;border-radius: 30px;border: inset;border-color: red;margin-bottom: -10px;" src="OIP (8).jpg" alt="">
+      اختيار المستوى</span>
+  </div>
+
+  <h1 id="site-title">
+    <img style="width: 200px;border-radius: 20px;margin-bottom: -40px;" src="اختبار-الذكاء-artguru.png" alt="">
+    اختر مستوي التحدي
+  </h1>
+
+  <!-- خانات المستويات -->
+  <div class="levels-container">
+    <div class="level-card easy" onclick="goLevel('easy.html')"> سهل
+    </div>
+    <div class="level-card medium" onclick="goLevel('medium.html')">      متوسط</div>
+    <div class="level-card hard" onclick="goLevel('hard.html')">     صعب
+    </div>
+    <div style="margin-bottom: 20px;" class="level-card insane" onclick="goLevel('insane.html')">جنوني  </div>
+</div>
+
+<script>
+function goHome() {
+    window.location.href = 'index.html';
+}
+
+function goLevel(page) {
+    window.location.href = page;
+}
+</script>
+</body>
+</html>
+
